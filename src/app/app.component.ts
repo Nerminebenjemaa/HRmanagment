@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,31 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'HRmanagment';
+
+  constructor( private router : Router){}
+
+redirectToOfficialList(){
+
+  this.router.navigate(['official']);
+
+}
+
+redirectToContractualList(){
+  this.router.navigate(['contractual']);
+
+}
+
+redirectToEmployeeList(){
+
+  this.router.navigate(['employee']);
+
+}
+
+redirectToDashbord(){
+
+  this.router.navigate(['dashbord']);
+
+}
+
+
 }
